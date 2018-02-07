@@ -1,6 +1,7 @@
 
 
 static void Sortowanie_babelkowe(int tablica[]);
+static void Sortowanie_przez_wstawianie(int tablica[]);
 
 
 static void Main(string [] args)
@@ -67,7 +68,28 @@ static void Main(string [] args)
 					
 					
 	
-	Console.WriteLine("[2] - Sortowanie...");
+	Console.WriteLine("[2] - Sortowanie przez wstawianie");
+		dwie tablice tablica[] i tablica_posortowana[]
+		tablica_posortowana[0] = tablica[0];
+		for(int i = 0; i < ile_liczb - 1; i++){
+			for(int j = i; j > 0; j--){
+				if(tablica_posortowane[j - 1] > tablica[i]){
+					tmp = tablica_posortowane[j - 1];
+					tablica_posortowane[j - 1] = tablica[i];
+					tablica_posortowane[j] = tmp;
+				}
+				else{
+					tablica_posortowane[j] = tablica[i];
+					break;
+				}
+			}
+		}
+		ConsoleWriteLine("Posortowane liczby: ");
+			for(int i = 0; i < ile_liczb; i++){
+				Console.Write(tablica_posortowane[i] + " ");
+	
+	
+	Console.WriteLine("[3] - Sortowanie szybkie");
 	
 	
 	
