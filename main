@@ -1,0 +1,85 @@
+
+
+static void Sortowanie_babelkowe(int tablica[]);
+
+
+static void Main(string [] args)
+{
+	bool czy_losowe;
+	bool czy posortowane;
+	int ile_liczb;
+	
+	Random rand = new Random();
+	
+	
+	Console.WriteLine("Witaj w programie, który sortuje liczby wybranym sposobem.");
+	
+	
+	Console.WriteLine("Podaj, ile liczb ma posortować program?");
+	ile_liczb = Int32.TryParse(Console.ReadLine());
+	
+	
+	Console.Writeline("Czy sam chcesz wprowadzić liczby, czy mają one być losowe z zakresu od 1 do 100?"0;
+	
+	
+		Console.WriteLine("[1] - losowe,");	
+		for(int i = 0; i < ile_liczb - 1; i++){
+			tablica[i] = rand.next(101);
+		}
+		Console.WriteLine("Oto twoja tablica: ");
+		for(int i = 0; i < ile_liczb - 1; i++){
+			Console.Write(tablica[i] + " ");
+		}
+		
+		
+		Console.WriteLine("[0] - nielosowe");
+		for(int i = 0; i < ile_liczb - 1; i++){
+			tablica[i] = Int32.TryParse(Console.ReadLine());
+		}
+		Console.WriteLine("Oto twoja tablica: ");
+		for(int i = 0; i < ile_liczb - 1; i++){
+			Console.Write(tablica[i] + " ");
+		}
+
+
+	
+	Console.WriteLine("Jakim sposobem program ma posortować liczby? Wybierz jeden z poniższych sposobów.");
+	
+		Console.WriteLine("[1] - Sortowanie bąbelkowe,");
+			for (int i = 0; i < ile_liczb - 1; i++){
+				czy_posortowane = true;
+				for (int j = 0; j < ile_liczb - 1; j++){
+					if(tablica[j] > tablica[j + 1]){
+						tmp = tablica[j];
+						tablica[j] = tablica[j + 1];
+						tablica[j + 1] = tmp;
+						czy_posortowane = false;
+					}
+				}
+				if(czy_posortowane) break;
+			}
+			
+			Console.Write("Liczby posortowane: ");
+			for(int i = 0; i < ile_liczb; i++){
+				Console.Write(tablica[i] + " ");
+					
+			Console.Read();		
+					
+					
+	
+	Console.WriteLine("[2] - Sortowanie...");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
